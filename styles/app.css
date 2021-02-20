@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #f1f1f1;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+.say-clock {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #CFCFCF;
+  background-position: 50% 50%;
+  background-size: 100% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+  min-height: 200px;
+  padding: 1em 1em 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 368px) {
+  .container {
+    min-height: 400px;
+    padding: 2em 2em 0;
+  }
+}
+
+.name {
+  font-size: 1.5em;
+  font-weight: 200;
+}
+
+@media screen and (min-width: 368px) {
+  .name {
+    font-size: 3em;
+  }
+}
+
+.time {
+  font-size: 2.5em;
+}
+
+@media screen and (min-width: 368px) {
+  .time {
+    font-size: 5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .time {
+    font-size: 8em;
+  }
+}
+
+span[data-meridian] {
+  font-size: .5em;
+}
+
+h1, h2 {
+  position: relative;
+  z-index: 2;
+}
+
+.background-overlay {
+  background-color: #111111;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  opacity: .3;
+  right: 0;
+  top: 0;
+}
+
+.background-overlay.animated-background {
+  -webkit-animation: shimmer 1s infinite;
+          animation: shimmer 1s infinite;
+  background-color: #ccc;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(50%, white), color-stop(75%, white), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, white 50%, white 75%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: no-repeat;
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: -2000px;
+  }
+  100% {
+    background-position: 2000px;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -2000px;
+  }
+  100% {
+    background-position: 2000px;
+  }
+}
+/*# sourceMappingURL=app.css.map */
