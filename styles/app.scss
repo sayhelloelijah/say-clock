@@ -28,6 +28,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
 }
 .container {
+    align-items: flex-end;
     display: flex;
     flex: {
         direction: column;
@@ -62,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     @media screen and (min-width: 768px) {
-        font-size: 8em;
+        font-size: 10em;
     }
 
     @at-root span[data-meridian] {
@@ -77,12 +78,11 @@ h1,h2 {
 
 .background-overlay {
     background: {
-        color: $black;
+        image: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.5) 70%);
     }
     bottom: 0;
     left: 0;
     position: absolute;
-    opacity: .3;
     right: 0;
     top: 0;
 

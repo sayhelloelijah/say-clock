@@ -2,6 +2,7 @@ export const clock = {
     getTime: function () {
         const date = new Date();
         let hours = date.getHours();
+        const militaryHours = date.getHours();
         let minutes = date.getMinutes();
         const meridian = hours <= 11 ? "am" : "pm";
         let time;
@@ -10,8 +11,8 @@ export const clock = {
             hours = hours - 12;
         }
 
-        if (hours < 10) {
-            hours = "0" + hours;
+        if (hours === 0) {
+            hours = 12;
         }
 
         if (minutes < 10) {
@@ -22,6 +23,7 @@ export const clock = {
             hours: hours,
             minutes: minutes,
             meridian: meridian,
+            militaryHours: militaryHours,
         });
     },
 

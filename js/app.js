@@ -5,7 +5,7 @@ function setBackgroundImage() {
     const image = header.getAttribute("data-image");
     const time = clock.getTime();
 
-    if (time.hours >= 8 && time.meridian === "pm") {
+    if (time.militaryHours >= 16 || time.militaryHours <= 8) {
         header.style.backgroundImage =
             "url('https://source.unsplash.com/daily?space,stars,moon,night,planets')";
     } else {
